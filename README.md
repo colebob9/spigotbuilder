@@ -2,6 +2,8 @@
 
 A simple batch / shell script to make a build of Spigot in the easiest way possible!
 
+**Only run spigotbuilder in its own directory (folder)! If you do not do this, the script may delete something unintentionally! (and may also make a lot of files where you put it.**
+
 Simply run _start.bat_ to start the building process. It will automatically make a build of Spigot for you. (Do not run any other file.)
 
 Features:
