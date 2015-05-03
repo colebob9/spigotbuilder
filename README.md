@@ -5,11 +5,11 @@ A simple batch / shell script to make a build of Spigot in the easiest way possi
 Simply run _start.bat_ to start the building process. It will automatically make a build of Spigot for you. (Do not run any other file.)
 
 Features:
-* Doesn't need an installation of Git to run!
+* Doesn't need an installation of Git to run! (Uses Portable Git)
 * Downloads latest BuildTools every run.
 * Cleans up files that were generated or downloaded (if wanted).
 * Downloads everything needed to build.
 
-Uses wget to download BuildTools and Git. Make sure to include wget in the same directory when building. (easiest way to do this is to download and run a release)
+Uses [other programs](https://github.com/colebob9/spigotbuilder/wiki/Programs-included-with-releases) to build. You cannot use the batch file by itself as it is in the source. (If using a [release](https://github.com/colebob9/spigotbuilder/releases), ignore this)
 
 (Tested in Windows 8.1)
