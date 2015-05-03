@@ -1,4 +1,6 @@
 # spigotbuilder
+**NOT FINISHED OR TESTED FULLY**
+
 A simple batch / shell script to make a build of Spigot!
 
 Simply run _start.bat_ to start the building process. It will guide you through the entire process of making a build.
