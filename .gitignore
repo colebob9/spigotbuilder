@@ -45,3 +45,6 @@ Temporary Items
 # wget stuff
 *.dll
 *.exe
+
+# ignore java files
+.jar
