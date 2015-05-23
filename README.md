@@ -16,4 +16,6 @@ Features:
 
 Uses [other programs](https://github.com/colebob9/spigotbuilder/wiki/Programs-included-with-releases) to build. You cannot use the batch file by itself as it is in the source. (If using a [release](https://github.com/colebob9/spigotbuilder/releases), ignore this)
 
+Uses the MIT license
+
 (Tested with Windows 8.1)
