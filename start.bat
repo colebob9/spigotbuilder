@@ -44,7 +44,7 @@ IF %world% == STOPASKING GOTO askdifferentversion
 IF %world% == HELP GOTO versionhelp
 IF %world% == VERSIONLIST GOTO versionlist
 IF %world% == **noversionishere!! ECHO Please put in a version name. & GOTO versionask
-IF %world% == default ECHO Now will complile with the default settings & GOTO buildprep
+IF %world% == default ECHO Now will complile with the default settings & GOTO builddefault
 IF %world% == 1.8.0 ECHO Now will complile 1.8.0 & GOTO build180
 IF %world% == 1.8.4 ECHO Now will complile 1.8.4 & GOTO build184
 IF %world% == 1.8.5 ECHO Now will complile 1.8.5 & GOTO build185
@@ -72,6 +72,16 @@ cmd.exe /c ""portablegit\bin\sh.exe" --login -i -- builder185.sh"
 GOTO afterbuild
 :afterbuild
 XCOPY build\Spigot\Spigot-Server\target\*.jar *.jar /Y /EXCLUDE:excludelist.txt
+IF EXIST *.jar GOTO compiled
+IF NOT EXIST *.jar GOTO didnotcompile
+:didnotcompile
+ECHO.
+ECHO It appears the script didn't build correctly!
+ECHO Check out what happened above.
+ECHO If it's my fault, create an issue on my GitHub repo
+PAUSE
+GOTO askgitkeep
+:compiled
 CLS
 ECHO The spigot build has been built and put into the same folder as your %~nx0 file.
 ECHO The Spigot build has been saved to:
