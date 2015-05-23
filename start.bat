@@ -27,6 +27,7 @@ ECHO.
 wget -O PortableGit-1.9.5-preview20150319.7z https://github.com/msysgit/msysgit/releases/download/Git-1.9.5-preview20150319/PortableGit-1.9.5-preview20150319.7z --no-check-certificate
 7za.exe x *.7z -oportablegit
 :askdifferentversion
+ECHO.
 Choice /M "Do you want to build an alternate version of Spigot?"
 If Errorlevel 2 Goto builddefault
 If Errorlevel 1 CLS & Goto versionhelp
