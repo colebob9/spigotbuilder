@@ -16,6 +16,7 @@ IF %version% == 1.8.0 ECHO Now will complile 1.8.0 & GOTO build180
 IF %version% == 1.8.3 ECHO Now will complile 1.8.3 & GOTO build183
 IF %version% == 1.8.4 ECHO Now will complile 1.8.4 & GOTO build184
 IF %version% == 1.8.5 ECHO Now will complile 1.8.5 & GOTO build185
+IF %version% == custom GOTO customversionhelp
 IF %version% == dev ECHO SKIPPING BUILD & GOTO afterbuild
 ECHO.
 ECHO Please input a valid version name. Type VERSIONLIST for options.
@@ -28,8 +29,30 @@ ECHO 1.8.0
 ECHO 1.8.3
 ECHO 1.8.4
 ECHO 1.8.5
+ECHO custom (ADVANCED, ONLY USE IF YOU KNOW WHAT THIS DOES!)
 ECHO.
 GOTO versionask
+:customversionhelp
+ECHO.
+ECHO You have entered custom mode.
+ECHO THIS CAN BREAK THE SCRIPT AND WILL MAY REQUIRE YOU TO RESTART
+ECHO To go back to the easier version selector, type GOBACK
+ECHO To show this screen again, type HELP
+ECHO.
+ECHO Type the version as you would after the "--rev" flag in BuildTools.
+ECHO Example: Enter custom version: 1.8.3
+:customversionask
+set customversion=**nocustomversionishere!!
+set /P customversion=Enter custom version / command: 
+IF %customversion% == HELP ECHO. & GOTO customversionhelp
+IF %customversion% == GOBACK ECHO. & CLS & GOTO versionhelp
+IF %customversion% == **nocustomversionishere!! ECHO Type a valid version name. & GOTO customversionask 
+ECHO #!/bin/sh >> %customversion%builder.sh
+ECHO echo Starting custom build process! >> %customversion%builder.sh
+ECHO cd build >> %customversion%builder.sh
+ECHO java -jar BuildTools.jar --rev %customversion% >> %customversion%builder.sh
+ECHO Created custom build file! Starting...
+GOTO buildcustom
 :builddefault
 cmd.exe /c ""buildfiles\portablegit\bin\sh.exe" --login -i -- buildfiles\builder.sh"
 GOTO afterbuild
@@ -44,6 +67,9 @@ cmd.exe /c ""buildfiles\portablegit\bin\sh.exe" --login -i -- buildfiles\builder
 GOTO afterbuild
 :build185
 cmd.exe /c ""buildfiles\portablegit\bin\sh.exe" --login -i -- buildfiles\builder185.sh"
+GOTO afterbuild
+:buildcustom
+cmd.exe /c ""buildfiles\portablegit\bin\sh.exe" --login -i -- buildfiles\%customversion%builder.sh"
 GOTO afterbuild
 :afterbuild
 buildfiles\afterbuild.bat

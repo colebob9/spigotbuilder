@@ -26,7 +26,6 @@ ECHO The Spigot build has been saved to:
 
             set jarfile=%%~nf.jar
     )
-cd ..
 set foldername=%~dp0
 echo.%foldername%%jarfile%
 ECHO.
@@ -43,5 +42,6 @@ If Errorlevel 1 Goto cleanup
 DEL /Q buildfiles\*.7z
 RD /S /Q buildfiles\build
 :done
+ECHO.
 ECHO Done!
 PAUSE
