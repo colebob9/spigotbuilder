@@ -26,6 +26,7 @@ ECHO The Spigot build has been saved to:
 
             set jarfile=%%~nf.jar
     )
+cd ..
 set foldername=%~dp0
 echo.%foldername%%jarfile%
 ECHO.

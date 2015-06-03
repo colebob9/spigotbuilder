@@ -1,5 +1,25 @@
 @ECHO OFF
 TITLE SpigotBuilder v1.2
+:filecheck
+ECHO Checking for required files before starting....
+ECHO.
+IF NOT EXIST buildfiles\wget.exe ECHO wget.exe could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\7za.exe ECHO 7za.exe could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\versioncheck.bat ECHO versioncheck.bat could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\afterbuild.bat ECHO afterbuild.bat could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\builder.sh ECHO builder.sh could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\libeay32.dll ECHO libeay32.dll could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\libiconv2.dll ECHO libiconv2.dll could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\libintl3.dll ECHO libintl3.dll could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\libssl32.dll ECHO libssl32.dll could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST buildfiles\excludelist.txt ECHO excludelist.txt could not be found! Please download a new release to fix this. & GOTO filewarning
+GOTO start
+:filewarning
+ECHO.
+PAUSE
+EXIT
+:start
+CLS
 ECHO SpigotBuilder v1.2
 ECHO Developed by colebob9!
 ECHO Source: github.com/colebob9/spigotbuilder
