@@ -1,0 +1,4 @@
+Simply run start.bat to start building Spigot! 
+The script will guide you through the building process.
+
+"clear.bat" in the "buildfiles" directory will clear out any files made by the script.

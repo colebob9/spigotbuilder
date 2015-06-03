@@ -1,4 +1,4 @@
 #!/bin/sh
 echo Starting build process!
-cd build
+cd buildfiles/build
 java -jar BuildTools.jar --rev 1.8
