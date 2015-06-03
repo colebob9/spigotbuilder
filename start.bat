@@ -1,8 +1,12 @@
 @ECHO OFF
-ECHO This will compile a Spigot jar for you. 
-ECHO This will take 10 to 15 minutes depending on how your PC handles it.
-ECHO There will be many lines of text. Don't worry, as it's all part of the process.
-ECHO Continue?
+ECHO SpigotBuilder v1.1.2
+ECHO Developed by colebob9!
+ECHO Source: github.com/colebob9/spigotbuilder
+ECHO.
+ECHO This will compile a Spigot jar for you.
+ECHO The process will take 10 to 15 minutes depending on how your PC handles it.
+ECHO Many lines of text will be on screen. Don't worry, as it's all part of the process.
+ECHO.
 PAUSE
 :BuildTools
 ECHO Downloading BuildTools...
