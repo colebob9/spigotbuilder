@@ -1,6 +1,8 @@
 # SpigotBuilder
 
-The idiot-proof batch script to make a build of Spigot in the easiest way possible! Only works in Windows.
+The most advanced and user-friendly batch script to make a build of Spigot in the easiest way possible! 
+
+Only works in Windows.
 
 Licenced under the MIT license
 
