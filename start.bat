@@ -42,12 +42,12 @@ TITLE SpigotBuilder v1.2
 CLS
 :DetectGit
 ECHO Looking for Portable Git from last build....
-ECHO.
-IF EXIST buildfiles\portablegit GOTO askgit
-GOTO Git
+IF EXIST buildfiles\portablegit ECHO Found! & ECHO. & GOTO askgit
+ECHO. & GOTO Git & ECHO Not found.
 :askgit
-ECHO The script has detected that you have built with this before and kept Git!
-ECHO We can save some time and not go through the download process.
+ECHO We detected that you've built with this before and kept Git!
+ECHO We can save a ton of time by skipping the download and extracting process.
+ECHO.
 Choice /M "Do you want to skip downloading Git?"
 If Errorlevel 2 Goto Git
 If Errorlevel 1 Goto askdifferentversion
