@@ -47,4 +47,12 @@ Temporary Items
 *.exe
 
 # ignore java files
-.jar
+*.jar
+
+# ignore files made from script
+/buildfiles/build
+/buildfiles/portablegit
+*.7z
+
+# ignore personal text files
+/testfiles
