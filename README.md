@@ -26,4 +26,4 @@ SpigotBuilder uses [other programs](https://github.com/colebob9/spigotbuilder/wi
 
 [Released under the MIT license.](https://github.com/colebob9/spigotbuilder/blob/master/LICENCE.txt)
 
-(Tested with Windows 8.1 and 10)
+Tested with Windows 8.1 and 10.
