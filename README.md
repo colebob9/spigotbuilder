@@ -1,6 +1,6 @@
 # SpigotBuilder
 
-The user-friendly batch script to make a build of Spigot!
+The user-friendly batch script to make a build of Spigot in the easiest way possible!
 
 **Only works in Windows.**
 
@@ -22,7 +22,7 @@ Simply run `start.bat` to start the building process. It will automatically make
 
 
 ## Notes
-SpigotBuilder uses [other programs](https://github.com/colebob9/spigotbuilder/wiki/Programs-included-with-releases) to help build. You cannot use the batch file by itself as it is in the source. Please download a [release](https://github.com/colebob9/spigotbuilder/releases) for it to work.
+SpigotBuilder uses [other programs](https://github.com/colebob9/spigotbuilder/wiki/Programs-included-with-releases) to help build. You cannot use the batch file by itself as it is in the source. Please download a [release](https://github.com/colebob9/spigotbuilder/releases) for it to work properly.
 
 [Released under the MIT license.](https://github.com/colebob9/spigotbuilder/blob/master/LICENCE.txt)
 
