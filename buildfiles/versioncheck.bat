@@ -69,8 +69,7 @@ GOTO afterbuild
 cmd.exe /c ""buildfiles\portablegit\bin\sh.exe" --login -i -- buildfiles\builder185.sh"
 GOTO afterbuild
 :buildcustom
-
 cmd.exe /c ""buildfiles\portablegit\bin\sh.exe" --login -i -- buildfiles\%customversion%builder.sh"
 GOTO afterbuild
 :afterbuild
-buildfiles\afterbuild.bat
+afterbuild.bat

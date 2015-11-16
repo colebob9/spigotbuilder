@@ -6,7 +6,7 @@ ECHO.
 IF NOT EXIST buildfiles\wget.exe ECHO wget.exe could not be found! Please download a new release to fix this. & GOTO filewarning
 IF NOT EXIST buildfiles\7za.exe ECHO 7za.exe could not be found! Please download a new release to fix this. & GOTO filewarning
 IF NOT EXIST buildfiles\versioncheck.bat ECHO versioncheck.bat could not be found! Please download a new release to fix this. & GOTO filewarning
-IF NOT EXIST buildfiles\afterbuild.bat ECHO afterbuild.bat could not be found! Please download a new release to fix this. & GOTO filewarning
+IF NOT EXIST afterbuild.bat ECHO afterbuild.bat could not be found! Please download a new release to fix this. & GOTO filewarning
 IF NOT EXIST buildfiles\builder.sh ECHO builder.sh could not be found! Please download a new release to fix this. & GOTO filewarning
 IF NOT EXIST buildfiles\libeay32.dll ECHO libeay32.dll could not be found! Please download a new release to fix this. & GOTO filewarning
 IF NOT EXIST buildfiles\libiconv2.dll ECHO libiconv2.dll could not be found! Please download a new release to fix this. & GOTO filewarning
@@ -23,13 +23,16 @@ CLS
 ECHO SpigotBuilder v1.2
 ECHO Developed by colebob9!
 ECHO Source: github.com/colebob9/spigotbuilder
-ECHO Licenced under the MIT license.
+ECHO Released under the MIT license.
 ECHO.
 ECHO This will compile a Spigot server jar for you.
-ECHO The process will take about 10 to 15 minutes, depending on how your PC 
-ECHO handles it.
+ECHO The process will take about 10 to 15 minutes, depending on how your PC handles it.
 ECHO Many lines of text will display on screen, showing the progress of the script.
 ECHO Don't worry, as it's all part of the process of building Spigot.
+ECHO.
+ECHO We will need to download some files before starting.
+ECHO Most of this will be about 25.65 MB in download size, plus what BuildTools downloads.
+ECHO 260.25 MB uncompressed.
 ECHO.
 PAUSE
 :BuildTools
@@ -62,7 +65,7 @@ buildfiles\7za.exe x buildfiles\*.7z -obuildfiles\portablegit
 CLS
 :askdifferentversion
 ECHO.
-Choice /M "Do you want to build an alternate version of Spigot?"
+Choice /M "Do you want to build an alternate version of Spigot? (Put N if you want the most recent version.)"
 If Errorlevel 2 Goto builddefault
 If Errorlevel 1 CLS & buildfiles\versioncheck.bat
 :builddefault

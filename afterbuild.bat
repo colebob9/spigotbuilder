@@ -16,7 +16,7 @@ GOTO askgitkeep
 CLS
     for %%f in (*.bat) do (
 
-            set batfile=%%~nf.jar
+            set batfile=%%~nf.bat
     )
 ECHO The spigot build has been built and put into the same folder as your 
 ECHO %batfile% file.
