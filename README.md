@@ -4,7 +4,7 @@ The user-friendly batch script to make a build of Spigot!
 
 **Only works in Windows.**
 
-## Download
+# Download
 
 [Download the latest release from the releases page.](https://github.com/colebob9/spigotbuilder/releases)
 
